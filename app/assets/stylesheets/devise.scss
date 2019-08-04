@@ -1,0 +1,23 @@
+.login-card-head {
+  background: #17aa8d;
+  text-align: center;
+  margin: -13px;
+  padding: 50px;
+  h2 {
+    font-size: 34px;
+    color: white;
+  }
+}
+.checkbox input, .radio input {
+  margin-right: 10px;
+}
+.auth-button {
+  color: white;
+  background: #17aa8d;
+  display: block;
+  margin: auto;
+  padding: 0px 50px;
+}
+a:hover, a:active {
+  color: white;
+}

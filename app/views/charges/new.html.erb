@@ -1,0 +1,15 @@
+
+<%= form_with url: charges_path do |f| %>
+  <%#= f.error_notification %>
+  <%#= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <%= f.hidden_field :cart_id, :value => @cart.id %>
+  <article>
+    <label  class="amount">
+      <span>Amount: $<%= @cart.total_price %></span>
+    </label>
+  </article>
+  <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+          data-key="<%= Rails.application.credentials.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount="<%= @cart.total_price %>"></script>
+<% end %>
